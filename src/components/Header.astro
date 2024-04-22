@@ -1,5 +1,7 @@
 ---
 
+const date = new Date();
+const time = date.getHours() + ":"+date.getMinutes();
 ---
 
 <div class="navbar">
@@ -7,10 +9,11 @@
         <img src="public/information-round-svgrepo-com.svg" alt="" class="icon">
     </div>
     <div class="right">
-       <a href=".">Home</a>
-        <div><a href="sport">Sport</a></div>
-        <div><a href="technology">Technologie</a></div>
-        <div><a href="science">Science</a></div>
+        <a href=".">Home</a>&nbsp;
+        <a href="sport">Sport</a>&nbsp;
+        <a href="technology">Technologie</a>&nbsp;
+        <a href="science">Science</a>&nbsp;
+        <span>Time: {time}</span>
     </div>
 
 </div>
@@ -25,8 +28,9 @@
     .right{
         display: flex;
         flex-direction: row;
-        margin-right: 10px;
-        
+        justify-content: space-between;
+        padding: 20px;
+        text-decoration: none;
     }
 
     .icon{
