@@ -1,0 +1,10 @@
+{
+    source: { id: null, name: '247Sports' },
+    author: '247Sports',
+    title: 'Identifying the best fit for Colorado cornerback transfer Cormani McClain - 247Sports',
+    description: null,
+    url: 'https://247sports.com/article/identifying-the-best-fit-for-colorado-cornerback-transfer-cormani-mcclain-usc-south-florida-usf-230773213/',
+    urlToImage: null,
+    publishedAt: '2024-04-21T15:16:41Z',
+    content: null
+  }

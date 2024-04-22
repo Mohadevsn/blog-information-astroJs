@@ -1,0 +1,25 @@
+---
+const {title, author, link, img,publishDate} = Astro.props;
+---
+
+<div class="card">
+    <h1 class="card--title">{title}</h1>
+    <p>Auteur: {author}</p>
+    <img src={img} alt="image" class="card--image">
+    <p>Publier le {publishDate}</p>
+</div>
+
+
+<style>
+    .card{
+        width: 80%;
+        border: 2px solid black;
+        border-radius: 5px;
+
+    }
+
+    .card--image{
+        width: 70%;
+        height: auto;
+    }
+</style>
