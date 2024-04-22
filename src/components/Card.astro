@@ -1,17 +1,22 @@
 ---
-const {title, author, link, img,publishDate} = Astro.props;
+const {title, author, link, img,publishDate, content} = Astro.props;
 ---
+<div id="card">
 
-<div class="card">
-    <h1 class="card--title">{title}</h1>
-    <p>Auteur: {author}</p>
-    <img src={img} alt="image" class="card--image">
-    <p>Publier le {publishDate}</p>
+    <div id="preview">
+        <h1 class="card--title">{title}</h1>
+        <p>Auteur: {author}</p>
+        <img src={img} alt="image" class="card--image">
+        <p>Publier le {publishDate}</p>
+    </div>
+    <div id="more" hidden>
+        <p>{content}</p>
+    </div>
 </div>
-
+    
 
 <style>
-    .card{
+    #card{
         width: 80%;
         border: 2px solid black;
         border-radius: 5px;
@@ -27,7 +32,24 @@ const {title, author, link, img,publishDate} = Astro.props;
     .card--image{
         width: 70%;
         height: auto;
-        padding-left: auto;
         margin-right: auto;
+        margin-left: auto;
+    }
+
+    button{
+        background: none;
+        width: 70%%;
+        border: none;
     }
 </style>
+
+<script>
+    const card = document.querySelector("#card");
+    const preview = document.querySelector("#preview")
+    const more = document.querySelector("#more")
+
+    card.addEventListener('click', ()=>{
+        preview.setAttribute("hidden" , "hidden")
+        more.removeAttribute("hidden")
+    })
+</script>
