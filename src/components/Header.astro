@@ -3,16 +3,33 @@
 ---
 
 <div class="navbar">
-    <div><a href=".">Home</a></div>
-    <div><a href="sport">Sport</a></div>
-    <div><a href="technology">Technologie</a></div>
-    <div><a href="science">Science</a></div>
+    <div class="left">
+        <img src="public/information-round-svgrepo-com.svg" alt="" class="icon">
+    </div>
+    <div class="right">
+       <a href=".">Home</a>
+        <div><a href="sport">Sport</a></div>
+        <div><a href="technology">Technologie</a></div>
+        <div><a href="science">Science</a></div>
+    </div>
+
 </div>
 
 <style>
     .navbar{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+    }
+
+    .right{
+        display: flex;
+        flex-direction: row;
+        margin-right: 10px;
+        
+    }
+
+    .icon{
+        width: 40px;
     }
 </style>
