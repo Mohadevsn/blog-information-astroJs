@@ -1,18 +1,25 @@
 ---
 const {title, author, link, img,publishDate, content} = Astro.props;
 ---
-<div id="card">
 
-    <div id="preview">
-        <h1 class="card--title">{title}</h1>
-        <p>Auteur: {author}</p>
-        <img src={img} alt="image" class="card--image">
-        <p>Publier le {publishDate}</p>
+
+    <div id="card">
+        <a href={link} target="_blank" >
+            <div id="preview">
+                    <h1 class="card--title">{title}</h1>
+                    <p>By: {author}</p>
+                <div class="card--image">
+                    <img src={img} alt="image" class="image">
+                </div>
+                <div class="little--info">
+                    <p>Publier le {publishDate}</p>
+                    <span>Click on the card for more</span>
+                </div>
+            </div>
+        </a>
+
     </div>
-    <div id="more" hidden>
-        <p>{content}</p>
-    </div>
-</div>
+
     
 
 <style>
@@ -25,15 +32,25 @@ const {title, author, link, img,publishDate, content} = Astro.props;
         margin-top: 20px;
         margin-left: auto;
         margin-right: auto;
+       
 
 
     }
 
     .card--image{
-        width: 70%;
+        max-width: fit-content;
         height: auto;
-        margin-right: auto;
-        margin-left: auto;
+        
+        justify-content: center;
+    }
+    .image{
+        width: 100%;
+    }
+    .little--info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     button{
@@ -41,10 +58,18 @@ const {title, author, link, img,publishDate, content} = Astro.props;
         width: 70%%;
         border: none;
     }
+    a{
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+    }
+    .big--link:hover{
+        background-color: rgb(162, 160, 160);
+    }
 </style>
 
 <script>
-    const card = document.querySelector("#card");
+    /*const card = document.querySelector("#card");
     const preview = document.querySelector("#preview")
     const more = document.querySelector("#more")
 
@@ -52,4 +77,5 @@ const {title, author, link, img,publishDate, content} = Astro.props;
         preview.setAttribute("hidden" , "hidden")
         more.removeAttribute("hidden")
     })
+    */
 </script>

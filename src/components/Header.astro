@@ -7,12 +7,15 @@ const time = date.getHours() + ":"+date.getMinutes();
 <div class="navbar">
     <div class="left">
         <img src="public/information-round-svgrepo-com.svg" alt="" class="icon">
+        <div class="nav--option">
+            <a href=".">Home</a>&nbsp;
+            <a href="sport">Sport</a>&nbsp;
+            <a href="technology">Technologie</a>&nbsp;
+            <a href="science">Science</a>&nbsp;
+        </div>
     </div>
     <div class="right">
-        <a href=".">Home</a>&nbsp;
-        <a href="sport">Sport</a>&nbsp;
-        <a href="technology">Technologie</a>&nbsp;
-        <a href="science">Science</a>&nbsp;
+        
         <span>Time: {time}</span>
     </div>
 
@@ -23,17 +26,42 @@ const time = date.getHours() + ":"+date.getMinutes();
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        background-color: #00308F;
+        border-radius: 3px;
+    }
+
+    .left{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
     }
 
     .right{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         padding: 20px;
         text-decoration: none;
     }
 
+    .nav--option{
+        text-align: center;
+        color: black;
+    }
+
     .icon{
         width: 40px;
+        margin-right: 10px;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+
+    }
+    a:hover{
+        background-color: #0751e6;
     }
 </style>

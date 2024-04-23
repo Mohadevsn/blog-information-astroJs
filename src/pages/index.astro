@@ -9,12 +9,12 @@ const articles = data.articles;
 console.log(articles)
 ---
 
-<MainLayout>
+<MainLayout title="Home">
 	<main>
 		<Header/>
 		{
 			articles.map(item => (
-				<Card title={item.title} author={item.author} link={item.link} img={item.urlToImage} publishDate={item.publishedAt} content={item.content} />
+				<Card title={item.title} author={item.author} link={item.url} img={item.urlToImage} publishDate={item.publishedAt} content={item.content} />
 			))
 		}
 
