@@ -13,7 +13,7 @@ console.log(articles)
         <Header/>
 		{
 			articles.map(item => (
-				<Card title={item.title} author={item.author} link={item.url} img={item.urlToImage} publishDate={item.publishedAt}/>
+				<Card client:load title={item.title} author={item.author} link={item.url} img={item.urlToImage} publishDate={item.publishedAt}/>
 			))
 		}
 	</main>
