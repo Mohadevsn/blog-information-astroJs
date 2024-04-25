@@ -5,7 +5,8 @@ import Header from "../components/Header.astro"
 const response = await fetch("https://newsapi.org/v2/top-headlines?category=general&country=us&apiKey=123a686228a14291b3ebf405805ac69e");
 const data = await response.json();
 const articles = data.articles;
-console.log(articles)
+console.log(articles);
+
 ---
 
 <MainLayout title="Home">
@@ -13,7 +14,7 @@ console.log(articles)
 		<Header/>
 		{
 			articles.map(item => (
-				<Card title={item.title} author={item.author} link={item.url} img={item.urlToImage} publishDate={item.publishedAt}/>
+				<Card title={item.title} author={item.author} link={item.url} img={item.urlToImage} publishDate={item.publishedAt} description={item.description}/>
 			))
 		}
 	</main>

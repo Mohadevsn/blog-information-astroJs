@@ -15,18 +15,12 @@ body {
     /* Pour éviter que l'image de fond se répète */
     background-repeat: no-repeat;
     /* URL de votre image */
-    background-image: url(/public/astro-homepage.jpg);
+    background-image: url(/astro-homepage.jpg);
     /* Pour que l'image de fond prenne toute la place disponible */
     height: 100vh;
     transform: scale(1.2);
     transition: transform 0.8s ease-out ;
   }
- .video{
-  position: fixed;
-    min-width: -webkit-fill-available;
-    height: 100vh;
- }
-
 
 
 .navbarrecontent{
