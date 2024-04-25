@@ -37,12 +37,8 @@ const time = date.getHours() + ":"+date.getMinutes();
         align-items: center;
         justify-content: space-between;
         margin-top: 20px;
-        opacity: 0;
-        transform: translateY(-70px);
         background-color: rgb(2, 49, 142,.7);
         border-radius: 3pc;
-        animation: hd 2s forwards ease-out;
-        animation-delay: .5s;
         font-size: 23px;
     }
 
@@ -114,14 +110,5 @@ const time = date.getHours() + ":"+date.getMinutes();
     }
 
  
-    @keyframes hd {
-        0%{
-            opacity: 0;
-            transform: translateY(-100px);
-        }
-        100%{
-            opacity: 1;
-            transform: translateY(0px);
-        }
-    }
+    
 </style>
