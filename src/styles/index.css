@@ -1,0 +1,98 @@
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .background {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    /* Pour s'assurer que l'image de fond couvre toute la fenêtre */
+    background-size: cover;
+    /* Pour centrer l'image de fond horizontalement et verticalement */
+    background-position: center;
+    /* Pour éviter que l'image de fond se répète */
+    background-repeat: no-repeat;
+    /* URL de votre image */
+    background-image: url(/public/astro-homepage.jpg);
+    /* Pour que l'image de fond prenne toute la place disponible */
+    height: 100vh;
+    transform: scale(1.2);
+    transition: transform 0.8s ease-out ;
+  }
+ .video{
+  position: fixed;
+    min-width: -webkit-fill-available;
+    height: 100vh;
+ }
+
+
+
+.navbarrecontent{
+  position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    height: 50px;
+    backdrop-filter: blur(173px);
+    box-shadow: -2px -6px 20px 16px #f53bc0b8;
+ 
+}
+.aaz{
+    width: 50%;
+} 
+
+/* Ajoutez des styles pour l'animation ici */
+
+/* Classe pour l'animation de transition */
+.transition-page {
+ 
+  animation: zoom  1s ease;
+}
+@keyframes zoom {
+  0%{
+    
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color:rgb(2, 49, 142, .7);
+  justify-content: space-between; /* Align content vertically */
+  align-items: center; /* Align content horizontally */
+  color: #fff;
+  padding: 10px 0;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%; font-size: 23px;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* Largeur de la barre de défilement */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0c4fb3;
+  border-radius: 30px; /* Couleur de fond de la barre de défilement */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #290964;
+  border-radius: 30px; /* Couleur de la poignée de défilement */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1c0097;
+  border-radius: 30px; /* Couleur de la poignée de défilement au survol */
+}
+.read{
+  color: #b9b6b6;
+  font-size: 23px;
+}

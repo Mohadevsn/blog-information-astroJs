@@ -6,7 +6,11 @@ const time = date.getHours() + ":"+date.getMinutes();
 
 <div class="navbar">
     <div class="left">
-        <img src="public/information-round-svgrepo-com.svg" alt="" class="icon">
+        
+            <span>T</span><span>h</span><span>e</span> <span>D</span>a<span></span>i<span>l</span><span>y</span> <span>F</span><span>l</span><span>o</span><span>w</span>
+        
+    </div>
+    <div class="mid">
         <div class="nav--option">
             <a href=".">Home</a>&nbsp;
             <a href="sport">Sport</a>&nbsp;
@@ -22,28 +26,67 @@ const time = date.getHours() + ":"+date.getMinutes();
 </div>
 
 <style>
+
+
+    
     .navbar{
+        font-family: 'poppins';
+        width: 100%;
+        font-size: 1.1em;
         display: flex;
-        flex-direction: row;
+        align-items: center;
         justify-content: space-between;
-        background-color: #00308F;
-        border-radius: 3px;
+        margin-top: 20px;
+        opacity: 0;
+        transform: translateY(-70px);
+        background-color: rgb(2, 49, 142,.7);
+        border-radius: 3pc;
+        animation: hd 2s forwards ease-out;
+        animation-delay: .5s;
+        font-size: 23px;
     }
 
     .left{
+        position: relative;
+        right: 0;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        margin-left: 25px;
+        color: white;
+        font-size: 1.1em;
+        font-weight: 500;
+
+    }
+
+    .left span:hover{
+        transform:translateY(-5px) ;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .left span {
+        transition:  transform .4s ease-in-out ;
+        display: inline-block;
+    }
+
+
+
+
+    .mid{
+        display: flex;
         align-items: center;
+        justify-content: center;
         
     }
 
     .right{
+        position: relative;
+        right: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         padding: 20px;
         text-decoration: none;
+        color: white;
     }
 
     .nav--option{
@@ -51,17 +94,34 @@ const time = date.getHours() + ":"+date.getMinutes();
         color: black;
     }
 
+    .nav--option a{
+        color: white;
+        text-decoration: none;
+        font-weight: 400;
+        margin-right: 10px;
+        transition:  all .2s ease-out ;
+        display: inline-block;
+       
+    }
+    .nav--option a:hover{
+        transform: scale(1.1);
+        color: rgba(160, 75, 240, 0.5);
+    }
+
     .icon{
         width: 40px;
         margin-right: 10px;
     }
 
-    a{
-        text-decoration: none;
-        color: white;
-
-    }
-    a:hover{
-        background-color: #0751e6;
+ 
+    @keyframes hd {
+        0%{
+            opacity: 0;
+            transform: translateY(-100px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
     }
 </style>
