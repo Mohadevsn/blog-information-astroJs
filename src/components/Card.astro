@@ -9,7 +9,7 @@ const {title, author, link, img,publishDate, content} = Astro.props;
                     <h1 class="card--title">{title}</h1>
                     <p>By: {author}</p>
                 <div class="card--image">
-                    <img src={img} alt="image" class="image">
+                    <img src={img} alt="" class="image">
                 </div>
                 <div class="little--info">
                     <p>Publier le {publishDate}</p>
@@ -68,14 +68,3 @@ const {title, author, link, img,publishDate, content} = Astro.props;
     }
 </style>
 
-<script>
-    /*const card = document.querySelector("#card");
-    const preview = document.querySelector("#preview")
-    const more = document.querySelector("#more")
-
-    card.addEventListener('click', ()=>{
-        preview.setAttribute("hidden" , "hidden")
-        more.removeAttribute("hidden")
-    })
-    */
-</script>
