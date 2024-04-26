@@ -15,7 +15,7 @@ body {
     /* Pour éviter que l'image de fond se répète */
     background-repeat: no-repeat;
     /* URL de votre image */
-    background-image: url(/astro-homepage.jpg);
+    background-image: url(/astro-homepage.webp);
     /* Pour que l'image de fond prenne toute la place disponible */
     height: 100vh;
     transform: scale(1.2);
