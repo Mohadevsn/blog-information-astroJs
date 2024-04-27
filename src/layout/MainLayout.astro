@@ -2,7 +2,7 @@
 const {title} = Astro.props
 import ViewTransitions from 'astro/components/ViewTransitions.astro'
 import '../styles/index.css'
-import Footers from '../components/footers.astro'
+import Footer from '../components/Footer.astro'
 
 ---
 
@@ -20,7 +20,7 @@ import Footers from '../components/footers.astro'
 		<div class="background">
 		</div>
 		<slot/>
-		<Footers/>
+		<Footer/>
 
 	</body>
 </html>
