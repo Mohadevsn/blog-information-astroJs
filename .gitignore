@@ -2,7 +2,7 @@
 dist/
 
 #api keys
-*.txt
+apiKey.txt
 # generated types
 .astro/
 
