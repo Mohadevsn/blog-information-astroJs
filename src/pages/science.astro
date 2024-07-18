@@ -18,7 +18,7 @@ console.log(articles);
 	<main>
         <Header/>
 		{
-			articles.map(item => (
+			articles.filter((item) => item.title !== '[Removed]').map(item => (
 				<Card title={item.title} author={item.author} link={item.url} img={item.urlToImage} publishDate={item.publishedAt}/>
 			))
 		}

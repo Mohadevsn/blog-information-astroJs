@@ -4,6 +4,7 @@ import Card from "../components/Card.astro"
 import Header from "../components/Header.astro"
 var apiKey = `${import.meta.env.API_KEY_1}` ;
 
+
 const url = "https://newsapi.org/v2/top-headlines?category=general&country=us&apiKey="+apiKey ; 
 const response = await fetch(url);
 
@@ -17,7 +18,7 @@ console.log(url);
 	<main>
 		<Header/>
 		{
-			articles.map(item => (
+			articles.filter((item) => item.title !== '[Removed]').map(item => (
 				<Card title={item.title} author={item.author} link={item.url} img={item.urlToImage} publishDate={item.publishedAt} description={item.description}/>
 			))
 		}
