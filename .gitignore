@@ -3,6 +3,8 @@ dist/
 
 #api keys
 apiKey.txt
+
+
 # generated types
 .astro/
 
